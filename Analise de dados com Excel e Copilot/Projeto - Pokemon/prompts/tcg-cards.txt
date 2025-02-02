@@ -1,0 +1,26 @@
+create a script to create a table in postfreSQL
+
+the first table is a table to sabe a pokemon tcg cards
+the second table is a table to sabe collection set
+ 
+conect to table with foreign key
+
+the first table :
+- hp
+- name
+- type
+- stage
+- info
+- attack
+- dammage
+- weak
+- ressis
+- retreat
+- cardnumberincollection
+
+The second table: 
+
+- id
+- collectionsetname
+- realeaseDate
+- totalCardsincolelction
