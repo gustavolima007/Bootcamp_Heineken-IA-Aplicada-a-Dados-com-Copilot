@@ -1,0 +1,51 @@
+-- Seleciona o banco de dados para usar
+USE db_tcgpokemon_cards;
+
+-- 1. Consultar todos os conjuntos de coleções
+-- Esta consulta retorna todas as linhas da tabela collection_sets
+SELECT * FROM collection_sets;
+
+-- 2. Consultar todos os cards Pokémon
+-- Esta consulta retorna todas as linhas da tabela pokemon_cards
+SELECT * FROM pokemon_cards;
+
+-- 3. Consultar todos os estágios
+-- Esta consulta retorna todas as linhas da tabela stages
+SELECT * FROM stages;
+
+-- 4. Consultar todos os tipos
+-- Esta consulta retorna todas as linhas da tabela types
+SELECT * FROM types;
+
+-- 5. Contar o número total de cards por conjunto de coleção
+-- Esta consulta retorna o nome do conjunto de coleção e o total de cards em cada conjunto
+SELECT collection_sets.collection_set_name, COUNT(pokemon_cards.id) AS total_cards
+FROM pokemon_cards
+JOIN collection_sets ON pokemon_cards.collection_set_id = collection_sets.id
+GROUP BY collection_sets.collection_set_name;
+
+-- 6. Listar todos os cards junto com seus tipos e estágios
+-- Esta consulta retorna o nome do card, o tipo e o estágio de cada card
+SELECT pokemon_cards.name, types.type_name, stages.stage_name
+FROM pokemon_cards
+JOIN types ON pokemon_cards.type_id = types.id
+JOIN stages ON pokemon_cards.stage_id = stages.id;
+
+-- 7. Encontrar todos os cards que têm mais de um certo valor de HP
+-- Esta consulta retorna todos os cards que têm 100 pontos de vida (HP) ou mais.
+SELECT * FROM pokemon_cards
+WHERE hp >= 100;
+
+-- 8. Obter a média de danos por tipo de card
+-- Esta consulta retorna o nome do tipo e a média de danos para cada tipo de card
+SELECT types.type_name, AVG(pokemon_cards.damage) AS average_damage
+FROM pokemon_cards
+JOIN types ON pokemon_cards.type_id = types.id
+GROUP BY types.type_name;
+
+-- 9. Listar todos os cards que pertencem a um conjunto de coleção específico
+-- Esta consulta retorna todos os cards que pertencem ao conjunto de coleção 'Base Set'
+SELECT pokemon_cards.*
+FROM pokemon_cards
+JOIN collection_sets ON pokemon_cards.collection_set_id = collection_sets.id
+WHERE collection_sets.collection_set_name = 'Base Set';
