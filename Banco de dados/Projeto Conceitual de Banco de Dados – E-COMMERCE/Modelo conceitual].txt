@@ -1,0 +1,119 @@
+Modelo Conceitual para E-commerce
+
+1. Entidades e Relacionamentos
+
+Cliente
+
+idCliente (PK)
+
+Nome
+
+Email
+
+Telefone
+
+Tipo (ENUM: PJ, PF)
+
+CPF (apenas se for PF)
+
+CNPJ (apenas se for PJ)
+
+Endereco
+
+Produto
+
+idProduto (PK)
+
+Nome
+
+Categoria
+
+Descrição
+
+Valor
+
+Fornecedor
+
+idFornecedor (PK)
+
+Razão Social
+
+CNPJ
+
+Endereço
+
+Estoque
+
+idEstoque (PK)
+
+Local
+
+Pedido
+
+idPedido (PK)
+
+idCliente (FK)
+
+DataPedido
+
+Status (ENUM: Pendente, Enviado, Entregue, Cancelado, Devolvido)
+
+EnderecoEntrega
+
+Entrega
+
+idEntrega (PK)
+
+idPedido (FK)
+
+StatusEntrega (ENUM: Em processamento, Em transporte, Entregue)
+
+CodigoRastreio
+
+Pagamento
+
+idPagamento (PK)
+
+idPedido (FK)
+
+Metodo (ENUM: Cartão de Crédito, Boleto, Pix, Transferência Bancária)
+
+StatusPagamento (ENUM: Aprovado, Pendente, Recusado)
+
+Relação Pedido-Produto
+
+idPedido (FK)
+
+idProduto (FK)
+
+Quantidade
+
+Produto_has_Estoque
+
+idProduto (FK)
+
+idEstoque (FK)
+
+Quantidade
+
+Disponibilizando um Produto
+
+idFornecedor (FK)
+
+idProduto (FK)
+
+2. Regras de Negócio
+
+Um cliente pode ser Pessoa Física (PF) ou Pessoa Jurídica (PJ), mas não ambos.
+
+Um pedido pode conter um ou mais produtos.
+
+Um pedido deve estar associado a um cliente.
+
+Cada pedido pode ter uma ou mais formas de pagamento.
+
+O status da entrega e o código de rastreamento devem estar vinculados ao pedido.
+
+O estoque de um produto é controlado por unidade e localização.
+
+O fornecedor disponibiliza um ou mais produtos para venda no e-commerce.
