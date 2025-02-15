@@ -14,9 +14,9 @@ Telefone
 
 Tipo (ENUM: PJ, PF)
 
-CPF (apenas se for PF)
+CPF (NULL se for PJ)
 
-CNPJ (apenas se for PJ)
+CNPJ (NULL se for PF)
 
 Endereco
 
@@ -28,25 +28,31 @@ Nome
 
 Categoria
 
-Descrição
+Descricao
 
 Valor
+
+idFornecedor (FK) (Produto pode ter um fornecedor principal)
 
 Fornecedor
 
 idFornecedor (PK)
 
-Razão Social
+RazaoSocial
 
 CNPJ
 
-Endereço
+Endereco
 
 Estoque
 
 idEstoque (PK)
 
-Local
+idProduto (FK)
+
+Localizacao
+
+Quantidade
 
 Pedido
 
@@ -60,15 +66,25 @@ Status (ENUM: Pendente, Enviado, Entregue, Cancelado, Devolvido)
 
 EnderecoEntrega
 
+Pedido_Produto (Relação N:N entre Pedido e Produto)
+
+idPedido (FK)
+
+idProduto (FK)
+
+Quantidade
+
+ValorUnitario (para registrar histórico de preços)
+
 Entrega
 
 idEntrega (PK)
 
 idPedido (FK)
 
-StatusEntrega (ENUM: Em processamento, Em transporte, Entregue)
+StatusEntrega (ENUM: Em Processamento, Em Transporte, Entregue)
 
-CodigoRastreio
+CodigoRastreio (NULL se não houver rastreio)
 
 Pagamento
 
@@ -80,27 +96,7 @@ Metodo (ENUM: Cartão de Crédito, Boleto, Pix, Transferência Bancária)
 
 StatusPagamento (ENUM: Aprovado, Pendente, Recusado)
 
-Relação Pedido-Produto
-
-idPedido (FK)
-
-idProduto (FK)
-
-Quantidade
-
-Produto_has_Estoque
-
-idProduto (FK)
-
-idEstoque (FK)
-
-Quantidade
-
-Disponibilizando um Produto
-
-idFornecedor (FK)
-
-idProduto (FK)
+ValorPago
 
 2. Regras de Negócio
 
@@ -117,3 +113,9 @@ O status da entrega e o código de rastreamento devem estar vinculados ao pedido
 O estoque de um produto é controlado por unidade e localização.
 
 O fornecedor disponibiliza um ou mais produtos para venda no e-commerce.
+
+O preço do produto em um pedido pode variar ao longo do tempo, portanto, deve ser registrado individualmente por pedido.
+
+Uma entrega está vinculada a um único pedido.
+
+O pagamento pode estar associado a múltiplos pedidos, permitindo compras parceladas ou combinadas.
