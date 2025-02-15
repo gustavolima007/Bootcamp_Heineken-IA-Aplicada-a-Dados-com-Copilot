@@ -1,42 +1,53 @@
-# Projeto Conceitual de Banco de Dados – E-COMMERCE 📊
+# 📌 Projeto E-Commerce - Banco de Dados
 
-Bem-vindo ao repositório do Projeto Conceitual de Banco de Dados – E-COMMERCE. Este projeto tem como objetivo criar um modelo de banco de dados para um sistema de e-commerce, considerando diferentes cenários de clientes, pagamentos e entregas.
+Este projeto faz parte do **Bootcamp Heineken - Inteligência Artificial Aplicada a Dados com Copilot** e tem como objetivo a modelagem conceitual, lógica e física de um banco de dados para um sistema de E-Commerce.
 
-## Objetivo
+---
 
-Refine o modelo apresentado acrescentando os seguintes pontos:
+## 🏗️ Modelo Conceitual  
 
-- **Cliente PJ e PF**: Uma conta pode ser PJ (Pessoa Jurídica) ou PF (Pessoa Física), mas não pode ter as duas informações.
-- **Pagamento**: Pode ter cadastrado mais de uma forma de pagamento.
-- **Entrega**: Possui status e código de rastreio.
+O modelo conceitual define a estrutura inicial do banco de dados, representando as entidades principais, seus atributos e relacionamentos. Ele serve como a base para a modelagem lógica e física, garantindo que o sistema atenda aos requisitos de um e-commerce típico.
 
-## Descrição do Projeto
+### **Principais Entidades:**  
+- **Cliente:** Dados do usuário, como nome, e-mail e endereço.  
+- **Produto:** Informações sobre os produtos disponíveis para venda.  
+- **Pedido:** Registro de compras feitas pelos clientes.  
+- **Pagamento:** Métodos de pagamento e status das transações.  
+- **Estoque:** Controle da disponibilidade dos produtos.  
 
-Este projeto visa a criação de um banco de dados conceitual para um sistema de e-commerce. O modelo considera os principais aspectos necessários para a operação de um e-commerce, incluindo cadastro de clientes, métodos de pagamento e status de entrega.
+## 📊 Modelo conceitual  
 
-## Estrutura do Banco de Dados
+A modelagem conceitual foi feita utilizando diagramas e está disponível nos arquivos:  
 
-- **Produto**: Tabela para cadastro dos produtos vendidos na plataforma. Cada produto possui um fornecedor.
-- **Estoque**: Tabela para controle do estoque dos produtos.
-- **Cliente**: Tabela para cadastro de clientes, podendo ser Pessoa Física (PF) ou Pessoa Jurídica (PJ). O endereço do cliente determinará o valor do frete.
-- **Pedido**: Tabela para registro dos pedidos realizados pelos clientes. Um pedido pode conter um ou mais produtos, é criado por um cliente e possui informações de compra, endereço e status da entrega. O pedido pode ser cancelado e possui um período de carência para devolução do produto.
-- **Fornecedor**: Tabela para cadastro dos fornecedores dos produtos.
+- [Modelo Conceitual](https://github.com/gustavolima007/Bootcamp_Heineken-IA-Aplicada-a-Dados-com-Copilot/blob/main/Banco%20de%20dados/Projeto%20Conceitual%20de%20Banco%20de%20Dados%20%E2%80%93%20E-COMMERCE/Modelo%20conceitual.png)  
 
-## Tecnologias Utilizadas
+---
 
-- [MySQL](https://www.mysql.com/)
-- Br modelo
+## 📊 Modelo Lógico  
 
-## Instalação
+O modelo lógico representa a estrutura detalhada do banco de dados com tabelas, chaves primárias e estrangeiras, garantindo a normalização e a integridade dos dados. O diagrama lógico está disponível no arquivo:  
+- [Modelo Lógico](https://github.com/gustavolima007/Bootcamp_Heineken-IA-Aplicada-a-Dados-com-Copilot/blob/main/Banco%20de%20dados/Projeto%20Conceitual%20de%20Banco%20de%20Dados%20%E2%80%93%20E-COMMERCE/Modelo%20Logico.png)  
 
-Para clonar e executar este projeto, você precisará ter o [Git](https://git-scm.com) instalado em seu computador. Em seguida, siga as instruções abaixo:
 
-```bash
-# Clone o repositório
-git clone https://github.com/seu-usuario/seu-repositorio.git
+---
 
-# Entre no diretório do projeto
-cd seu-repositorio
+## 🗄️ Banco de Dados  
 
-# Execute o script SQL para criar o banco de dados
-mysql -u seu-usuario -p < script.sql
+A estrutura do banco foi implementada utilizando SQL, incluindo a criação de tabelas e relações definidas no modelo lógico. O script SQL está disponível em:  
+- [Banco de Dados.sql](https://github.com/gustavolima007/Bootcamp_Heineken-IA-Aplicada-a-Dados-com-Copilot/blob/main/Banco%20de%20dados/Projeto%20Conceitual%20de%20Banco%20de%20Dados%20%E2%80%93%20E-COMMERCE/Banco%20de%20dados.sql)  
+
+---
+
+## 🚀 Tecnologias Utilizadas  
+
+- **Banco de Dados:** Oracle / MySQL  
+- **Ferramentas de Modelagem:** BrModelo
+- **Linguagem:** SQL  
+
+---
+
+## 📌 Como Usar  
+
+1. Clone o repositório:  
+   ```bash
+   git clone https://github.com/gustavolima007/Bootcamp_Heineken-IA-Aplicada-a-Dados-com-Copilot.git
