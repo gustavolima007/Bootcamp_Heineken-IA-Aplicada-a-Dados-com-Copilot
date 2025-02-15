@@ -15,7 +15,7 @@ Criar um banco de dados para otimizar:
 ## 📌 Modelagem do Banco de Dados
 
 - 🔹 [Modelo Conceitual](https://github.com/gustavolima007/Bootcamp_Heineken-IA-Aplicada-a-Dados-com-Copilot/blob/main/Banco%20de%20dados/Projeto%20para%20Oficina/Modelo%20conceitual.png)
-- 🔹 [Modelo Lógico](https://github.com/gustavolima007/Bootcamp_Heineken-IA-Aplicada-a-Dados-com-Copilot/blob/main/Banco%20de%20dados/Projeto%20para%20Oficina/Modelo%20conceitual.png)
+- 🔹 [Modelo Lógico](https://github.com/gustavolima007/Bootcamp_Heineken-IA-Aplicada-a-Dados-com-Copilot/blob/main/Banco%20de%20dados/Projeto%20para%20Oficina/Modelo%20Logico.png)
 
 ## 📌 Estrutura do Banco de Dados
 
