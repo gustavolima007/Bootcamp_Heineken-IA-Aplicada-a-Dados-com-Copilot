@@ -25,6 +25,7 @@ Durante o bootcamp, apliquei os conhecimentos adquiridos em projetos práticos:
 - **Live de Lançamento**: *IA Aplicada a Dados* (16/01/2025)
 - **SQL Tuning**: *Melhoria de Performance* (21/01/2025)
 - **Live: Qual o Perfil de Sucesso de um Profissional** (24/02/2025)
+  - Com **Fábio Criniti**, Diretor de TI da Heineken Brasil.
   - Descubra quais são as competências, habilidades e atitudes que fazem a diferença para construir uma carreira de sucesso.
 
 Acompanhe meu progresso nesta jornada e fique à vontade para contribuir! 🚀
