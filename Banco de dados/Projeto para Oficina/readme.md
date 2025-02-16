@@ -35,7 +35,7 @@ Criar um banco de dados para otimizar:
 
 ## 🗄️ Consultas (Query View) do banco de dados
 
-- [Banco de Dados.sql](**********************)
+- [Todas as consultas: ](https://github.com/gustavolima007/Bootcamp_Heineken-IA-Aplicada-a-Dados-com-Copilot/tree/main/Banco%20de%20dados/Projeto%20para%20Oficina/Query%20View)
 
 ## 📌 Ordem de Serviço Detalhada
 
