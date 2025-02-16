@@ -33,6 +33,88 @@ Criar um banco de dados para otimizar:
 - **OS_Serviço**: Relaciona ordens de serviço e serviços executados.
 - **OS_Peca**: Relaciona ordens de serviço e peças utilizadas.
 
+## 🗄️ Consultas (Query View) do banco de dados
+
+- [Banco de Dados.sql](**********************)
+
+## 📌 Ordem de Serviço Detalhada
+
+```sql
+SELECT
+    os.idOS,
+    os.DataEmissao,
+    os.DataConclusao,
+    os.Status,
+    os.ValorTotal,
+    v.Placa,
+    v.Modelo,
+    v.Marca,
+    v.Ano,
+    c.Nome AS NomeCliente,
+    c.Endereco AS EnderecoCliente,
+    c.Email AS EmailCliente,
+    c.Telefone AS TelefoneCliente,
+    e.NomeEquipe,
+    GROUP_CONCAT(DISTINCT p.Nome ORDER BY p.Nome ASC SEPARATOR ', ') AS Pecas,
+    GROUP_CONCAT(DISTINCT s.Nome ORDER BY s.Nome ASC SEPARATOR ', ') AS Servicos
+FROM
+    OrdemServico os
+JOIN
+    Veiculo v ON os.idVeiculo = v.idVeiculo
+JOIN
+    Cliente c ON v.idCliente = c.idCliente
+JOIN
+    Equipe e ON os.idEquipe = e.idEquipe
+LEFT JOIN
+    OS_Peca osp ON os.idOS = osp.idOS
+LEFT JOIN
+    Peca p ON osp.idPeca = p.idPeca
+LEFT JOIN
+    OS_Servico oss ON os.idOS = oss.idOS
+LEFT JOIN
+    Servico s ON oss.idServico = s.idServico
+GROUP BY
+    os.idOS;
+```
+
+## 📌 Clientes com Mais Ordens de Serviço
+
+```sql
+SELECT
+    c.idCliente,
+    c.Nome AS NomeCliente,
+    COUNT(os.idOS) AS TotalOrdens
+FROM
+    Cliente c
+JOIN
+    Veiculo v ON c.idCliente = v.idCliente
+JOIN
+    OrdemServico os ON v.idVeiculo = os.idVeiculo
+GROUP BY
+    c.idCliente, c.Nome
+HAVING
+    COUNT(os.idOS) > 5
+ORDER BY
+    TotalOrdens DESC;
+```
+
+## 📌 Peças mais Utilizadas
+
+```sql
+SELECT
+    p.idPeca,
+    p.Nome AS NomePeca,
+    SUM(osp.Quantidade) AS QuantidadeTotal
+FROM
+    Peca p
+JOIN
+    OS_Peca osp ON p.idPeca = osp.idPeca
+GROUP BY
+    p.idPeca, p.Nome
+ORDER BY
+    QuantidadeTotal DESC;
+```
+
 ## 📌 Regras de Negócio
 
 - Um cliente pode ter vários veículos.
@@ -46,3 +128,4 @@ Clone o repositório:
 
 ```bash
 git clone https://github.com/seu-usuario/nome-do-repositorio.git
+```

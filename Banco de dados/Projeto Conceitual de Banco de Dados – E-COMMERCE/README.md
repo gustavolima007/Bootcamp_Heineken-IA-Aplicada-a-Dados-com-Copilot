@@ -38,7 +38,7 @@ A estrutura do banco foi implementada utilizando SQL, incluindo a criação de t
 
 ## 🗄️ Consultas (Query View) do banco de dados
 
-- [Banco de Dados.sql](***)  
+- [Banco de Dados.sql](https://github.com/gustavolima007/Bootcamp_Heineken-IA-Aplicada-a-Dados-com-Copilot/tree/main/Banco%20de%20dados/Projeto%20Conceitual%20de%20Banco%20de%20Dados%20%E2%80%93%20E-COMMERCE/Query%20View)  
 
 ### 📌 Produtos mais vendidos e sua receita total 
 
