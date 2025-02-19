@@ -12,7 +12,7 @@ O objetivo deste projeto é criar um dashboard de vendas no Excel, focado na org
 
    ```bash
    git clone https://github.com/gustavolima007/Bootcamp_Heineken-IA-Aplicada-a-Dados-com-Copilot.git
-
+```
 
 ## 📊 Dashboard
 O dashboard contém as seguintes visualizações:
