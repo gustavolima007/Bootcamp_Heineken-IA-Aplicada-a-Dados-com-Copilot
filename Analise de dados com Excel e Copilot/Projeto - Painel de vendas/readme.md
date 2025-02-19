@@ -8,13 +8,11 @@ O objetivo deste projeto é criar um dashboard de vendas no Excel, focado na org
 - **Produtos**: Lista de produtos disponíveis para venda.
 - **Clientes**: Informações sobre os clientes que realizaram compras.
 
-## 🛠️ Como Reproduzir
-1. Clone o repositório:
+## 📌 Clone o repositório:
+
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
-   ```
-2. Abra o arquivo `dashboard_vendas.xlsx` no Excel.
-3. Navegue pelas diferentes abas do Excel para visualizar os dados e o dashboard.
+   git clone https://github.com/gustavolima007/Bootcamp_Heineken-IA-Aplicada-a-Dados-com-Copilot.git
+
 
 ## 📊 Dashboard
 O dashboard contém as seguintes visualizações:
@@ -22,5 +20,4 @@ O dashboard contém as seguintes visualizações:
 - Gráfico de Produtos Mais Vendidos 🥇
 - Análise de Vendas por Cliente 🧑‍💼
 
-## 📬 Contato
-Para mais informações, entre em contato pelo email: seu-email@exemplo.com
+![Gráfico de Vendas - Assinaturas Xbox](https://github.com/gustavolima007/Bootcamp_Heineken-IA-Aplicada-a-Dados-com-Copilot/raw/main/Analise%20de%20dados%20com%20Excel%20e%20Copilot/Projeto%20-%20Painel%20de%20vendas/Paineis/Gr%C3%A1fico%20de%20vendas%20-%20Assinaturas%20Xbox.png)
