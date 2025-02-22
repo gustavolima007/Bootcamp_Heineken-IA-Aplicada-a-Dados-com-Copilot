@@ -70,4 +70,4 @@ Durante o bootcamp, apliquei os conhecimentos adquiridos em projetos práticos:
 - **Horário**: 15:00
 - **Duração**: 1 hora
 
-Acompanhe meu progresso nesta jornada e fique à vontade para contribuir! 🚀
+⭐ **Se este repositório te ajudar, não esqueça de dar uma estrela!**
